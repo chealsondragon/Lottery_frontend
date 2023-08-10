@@ -8,6 +8,7 @@ import Dashboard from './pages/dashboard';
 import SignUp from './pages/signup';
 import Score from './pages/score';
 import Setting from './pages/setting';
+import Account from './pages/accounts';
 const App = () => {
   return (
     <BrowserRouter>
@@ -16,7 +17,7 @@ const App = () => {
         <Route path='/' element={<Lottery />} />
         <Route path='/setting' element={<Setting />} />
         <Route path='/score' element={<Score />} />
-        <Route path='/lottery' element={<Lottery />} />
+        <Route path='/users' element={<Account />} />
         <Route path='/signin' element={<SignIn />} />
         <Route path='/signup' element={<SignUp />} />
       </Routes>

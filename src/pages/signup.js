@@ -86,7 +86,7 @@ export default function SignUp() {
                                     required
                                     fullWidth
                                     id="email"
-                                    label="Email Address"
+                                    label="Telegram Address"
                                     name="email"
                                     autoComplete="email"
                                 />

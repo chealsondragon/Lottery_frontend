@@ -16,8 +16,6 @@ import { LinkContainer } from 'react-router-bootstrap'
 import { useDispatch, useSelector } from 'react-redux';
 import { logout } from '../store/reducers/users';
 
-const pages = [{ id: 1, name: 'Lottery', link: "lottery" },];
-
 function Header() {
     const dispatch = useDispatch()
     const logined = useSelector((state) => state.users.loginedUserInfo)
@@ -46,16 +44,6 @@ function Header() {
                         </Typography>
                     </LinkContainer>
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-                        <LinkContainer
-                            to={`lottery`}
-                        >
-                            <Button
-                                variant='text'
-                                sx={{ my: 2, color: 'white', display: 'block' }}
-                            >
-                                Lottery
-                            </Button>
-                        </LinkContainer>
                         {logined.isAdmin  ?(<>
                         <LinkContainer
                             to={`score`}
@@ -75,6 +63,16 @@ function Header() {
                                 sx={{ my: 2, color: 'white', display: 'block' }}
                             >
                                 Setting
+                            </Button>
+                        </LinkContainer>
+                        <LinkContainer
+                            to={`users`}
+                        >
+                            <Button
+                                variant='text'
+                                sx={{ my: 2, color: 'white', display: 'block' }}
+                            >
+                                Users
                             </Button>
                         </LinkContainer></>):(<></>)}
                     </Box>
